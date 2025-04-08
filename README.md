@@ -77,7 +77,7 @@ curl -fsSL https://get.pnpm.io/install.sh | sh -
 function App() { ... }  
 // React 17+ — можно без импорта!
 ```
-
+  
 ---
 ## 🔗 Полезные ссылки:
 * [Vite Docs](https://vitejs.dev/)
