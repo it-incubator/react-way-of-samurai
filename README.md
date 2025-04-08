@@ -1,54 +1,95 @@
-# React + TypeScript + Vite
+## Привет, самурай!
+Мы обновили для тебя репозиторий по Пути Самурая 🥳
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Конечно мир разработки не стабилен и изменчив, но сейчас, в 2025, этот репозиторий актуализирует знания полученные при просмотре [Курса "React JS - путь самурая 1.0"](https://www.youtube.com/playlist?list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8)
 
-Currently, two official plugins are available:
+Надеемся что будет полезно и интересно
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+# Создание React + TypeScript приложения на Vite
+Пошаговая инструкция для быстрого старта проекта с Vite + React + TypeScript с использованием pnpm.
 
-## Expanding the ESLint configuration
+## 🚀 Создание проекта
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Откройте терминал и выполните:
+```pnpm create vite```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+→ Введите:
+
+* Имя проекта (например, ReactWayOfSamurai)
+* Выберите React
+* Выберите TypeScript
+
+После этого перейдите в папку проекта:
+```cd my-vite-app```
+
+## 📦 Установка зависимостей
+```pnpm install```
+
+## 📦 Запуск проекта
+```pnpm install```
+
+## 📂 Структура проекта
+
+❗️Обратите внимание на расположение файлов index.html, main.tsx и App.tsx - оно отличается от того что показывает Димыч в [06 - index.js, App, JSX](https://www.youtube.com/watch?v=CdweQ2F2qBI)
+
+---
+# Переход с CRA (npm) на Vite (pnpm)
+
+Этот проект был перенесён с Create React App (CRA) + npm на Vite + pnpm.
+
+Ниже — основные изменения и инструкции для работы.
+
+## 📦 Установка зависимостей
+Раньше использовался ***npm***, теперь — ***pnpm*** (быстрее и эффективнее).
+
+### 1. Установка pnpm
+Если у вас его нет, установите глобально:
+```
+npm install -g pnpm
+// или (для Linux/macOS)
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Установка зависимостей
+Вместо ```npm install``` теперь:
+```pnpm install```
+## 🚀 Запуск разработки
+Раньше:
+```npm start```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Теперь:
+```pnpm dev```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+→ Сервер запустится на http://localhost:5173 (а не 3000, как в CRA).
+
+---
+
+## 🔄 Что изменилось в коде?
+### 1. Импорт React
+Раньше нужно было явно импортировать React:
+
+```import React from 'react';```
+
+Теперь:
+
 ```
+function App() { ... }  
+// React 17+ — можно без импорта!
+```
+
+---
+## 🔗 Полезные ссылки:
+* [Vite Docs](https://vitejs.dev/)
+* [PNPM Docs](https://pnpm.io/)
+* [Миграция с CRA на Vite](https://vitest.dev/guide/migration.html)
+* [TypeScript + React](https://vitejs.dev/)
+
+---
+Над проектом работали:
+
+[Дарья Метелица](https://t.me/Dari_met)
+
+[Елизавета Савинова](https://t.me/Veta_S0)
+
+Нам будут приятны ваши респекты и отзывы 😉
